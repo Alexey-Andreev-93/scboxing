@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+ main section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: 800;
+}
+
+/* main:hover section {
+    opacity: 0.1;
+}
+
+main section:hover {
+    opacity: 1;
+} */
+
+section:nth-child(even) {
+    background: linear-gradient(to bottom left, #000 50%, #eb0c0c 50%);
+    color: #f0e6e6;
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(to bottom right, #eb0c0c 50%, #000 50%);
+    color: #f0e6e6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background:#0a0a0a;
+}
+
+nav a {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 8px 25px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav a:hover,
+section#first-section:hover~nav a[href="#first-section"],
+section#second-section:hover~nav a[href="#second-section"],
+section#third-section:hover~nav a[href="#third-section"],
+section#fourth-section:hover~nav a[href="#fourth-section"],
+section#fifth-section:hover~nav a[href="#fifth-section"] {
+    background: linear-gradient(to  bottom right, #000 50%, #eb0c0c 50%);
+    color: #f0e6e6;
+}
+
+nav a:active {
+    background: linear-gradient(to top left #eb0c0c 50%, #000 50%);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#home h2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #0a0a0a;
+    color: #eb0c0c;
+    font-size: 2.2em;
+    line-height: 310px;
+    text-align: center;
+    mix-blend-mode: screen;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
